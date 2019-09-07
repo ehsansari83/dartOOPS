@@ -2,9 +2,28 @@ class Course{
   //properties or field 
   var courseName;
   int fees;
+
   //--------------------setters and getters 
+  void set studentNum(int studentNum){
+    if (studentNum < 15){
+      print("${this.courseName} fee has been increased to ${this.fees * 1.15}");
+    }else {
+       print("${this.courseName} is of price ${this.fees}"); 
+      }
+    }
+  get studentNum{
+  return fees;
+}
+
+
 
   //------------------constructors 
+  // Course(String courseName, int fees){
+  //   this.courseName = courseName;
+  //   this.fees = fees;
+  //   print("WE will study ${this.courseName} with a price of ${this.fees}");
+  // }
+
 
   //-----------------functions or methods
   //calling a field in the funciton with ithe class we use this.field
@@ -16,8 +35,9 @@ class Course{
 void main(){
   var courseinfo = Course();
 
-  courseinfo.courseName = "Java";
-  courseinfo.fees = 999;
+   courseinfo.courseName = "Java";
+   courseinfo.fees = 999;
+   courseinfo.studentNum = 16;
   courseinfo.details();
 
 
